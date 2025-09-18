@@ -1,3 +1,5 @@
+import 'package:cardinal_quotes_task/core/theme/app_theme.dart';
+import 'package:cardinal_quotes_task/features/auth/view/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,11 +12,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      title: 'Cardinal Quotes',
+      theme: AppTheme.lightThemeMode,
+      home: const LoginPage(),
     );
   }
 }
