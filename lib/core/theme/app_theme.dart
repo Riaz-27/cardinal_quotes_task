@@ -16,6 +16,8 @@ class AppTheme {
   );
   static final lightThemeMode = ThemeData.light().copyWith(
     scaffoldBackgroundColor: AppPalette.colorgg,
+    splashColor: Colors.transparent,
+    highlightColor: AppPalette.color3.withAlpha(50),
     textTheme: TextTheme(
       bodyLarge: textStyle,
       bodyMedium: textStyle,

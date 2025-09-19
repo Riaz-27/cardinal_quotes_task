@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Cardinal Quotes',
+      debugShowCheckedModeBanner: false,
       theme: AppTheme.lightThemeMode,
       home: const LoginPage(),
     );
