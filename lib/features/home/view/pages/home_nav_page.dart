@@ -1,7 +1,11 @@
 import 'package:cardinal_quotes_task/core/theme/app_palette.dart';
 import 'package:cardinal_quotes_task/features/home/view/pages/home_page.dart';
+import 'package:cardinal_quotes_task/features/home/view/pages/sound_page.dart';
+import 'package:cardinal_quotes_task/features/home/view/pages/top_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+
+import 'soul_page.dart';
 
 class HomeNavPage extends StatefulWidget {
   static MaterialPageRoute route() =>
@@ -15,18 +19,90 @@ class HomeNavPage extends StatefulWidget {
 class _HomeNavPageState extends State<HomeNavPage> {
   int selectedIndex = 0;
 
+  bool showNotificationPopup = false;
+  bool isNotificationToggled = true;
+
   final pages = [
-    HomePage(),
-    HomePage(),
-    HomePage(),
-    HomePage(),
-    HomePage(),
+    const HomePage(),
+    const SoundPage(),
+    const SoulPage(),
+    const TopPage(),
   ];
+
+  Widget notificationPopup() => Positioned(
+    bottom: 10,
+    right: 30,
+    child: AnimatedOpacity(
+      duration: const Duration(milliseconds: 300),
+      opacity: showNotificationPopup ? 1 : 0,
+      child: !showNotificationPopup
+          ? const SizedBox()
+          : Container(
+              padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 8),
+              width: 156,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: AppPalette.color1,
+              ),
+              child: Column(
+                children: [
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          showNotificationPopup = false;
+                        });
+                      },
+                      child: const Icon(
+                        Icons.clear,
+                        size: 20,
+                      ),
+                    ),
+                  ),
+                  Row(
+                    children: [
+                      const Text(
+                        'Notification',
+                        style: TextStyle(
+                          fontFamily: 'Raleway',
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      Transform.scale(
+                        scale: 0.55,
+                        child: Switch(
+                          thumbColor: WidgetStateProperty.all(
+                            AppPalette.color1,
+                          ),
+                          activeTrackColor: AppPalette.color3,
+                          inactiveTrackColor: AppPalette.color3.withAlpha(50),
+                          value: isNotificationToggled,
+                          onChanged: (value) {
+                            setState(() {
+                              isNotificationToggled = value;
+                            });
+                          },
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+    ),
+  );
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: pages[selectedIndex],
+      body: Stack(
+        children: [
+          pages[selectedIndex],
+          notificationPopup(),
+        ],
+      ),
       bottomNavigationBar: Container(
         decoration: const BoxDecoration(
           borderRadius: BorderRadius.only(
@@ -67,9 +143,18 @@ class _HomeNavPageState extends State<HomeNavPage> {
               showUnselectedLabels: true,
               type: BottomNavigationBarType.fixed,
               onTap: (index) => {
-                setState(() {
-                  selectedIndex = index;
-                }),
+                if (index == 4)
+                  {
+                    setState(() {
+                      showNotificationPopup = !showNotificationPopup;
+                    }),
+                  }
+                else
+                  {
+                    setState(() {
+                      selectedIndex = index;
+                    }),
+                  },
               },
               items: [
                 BottomNavigationBarItem(

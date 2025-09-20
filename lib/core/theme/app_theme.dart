@@ -15,6 +15,15 @@ class AppTheme {
     color: AppPalette.color3,
   );
   static final lightThemeMode = ThemeData.light().copyWith(
+    appBarTheme: const AppBarTheme(
+      backgroundColor: Colors.transparent,
+      titleTextStyle: TextStyle(
+        color: AppPalette.color1,
+        fontFamily: 'Raleway',
+        fontSize: 16,
+        fontWeight: FontWeight.w600,
+      ),
+    ),
     scaffoldBackgroundColor: AppPalette.colorgg,
     splashColor: Colors.transparent,
     highlightColor: AppPalette.color3.withAlpha(50),

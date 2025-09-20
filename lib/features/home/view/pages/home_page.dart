@@ -35,7 +35,6 @@ class _HomePageState extends State<HomePage> {
                         IconButton(
                           onPressed: () {
                             setState(() {
-                              print(showDrawer);
                               showDrawer = !showDrawer;
                             });
                           },
@@ -210,7 +209,7 @@ class _HomePageState extends State<HomePage> {
               showDrawer: showDrawer,
               onClose: () {
                 setState(() {
-                  showDrawer = !showDrawer;
+                  showDrawer = false;
                 });
               },
               onLogout: () {

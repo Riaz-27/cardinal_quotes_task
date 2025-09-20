@@ -2,7 +2,6 @@ import 'package:cardinal_quotes_task/core/theme/app_palette.dart';
 import 'package:cardinal_quotes_task/core/widgets/custom_field.dart';
 import 'package:cardinal_quotes_task/features/auth/view/pages/signup_page.dart';
 import 'package:cardinal_quotes_task/features/home/view/pages/home_nav_page.dart';
-import 'package:cardinal_quotes_task/features/home/view/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {

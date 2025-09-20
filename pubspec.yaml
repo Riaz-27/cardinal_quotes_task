@@ -61,6 +61,9 @@ flutter:
   assets:
     - assets/images/
     - assets/images/home_featured/
+    - assets/images/quotes/
+    - assets/images/sounds/
+    - assets/icons/
     - assets/icons/top_menu_icons/
     - assets/icons/menu_icons/
     - assets/icons/nav_icons/

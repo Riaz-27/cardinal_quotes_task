@@ -366,3 +366,47 @@ const drawerMenu = [
     "title": "Save",
   },
 ];
+
+final quotes = [
+  {
+    'title': 'Quotes1',
+    'imageUrl': 'assets/images/quotes/quotes1.png',
+    'views': '567.57k',
+    'tags': ['#Ambition', '#Inspiration', '#Motivitional'],
+  },
+  {
+    'title': 'Quotes2',
+    'views': '567.57k',
+    'color': 'FFCACA',
+    'quoteText':
+        'You cannot let a fear of failure or a fear of comparison or a fear of judgment stop you from doing the things that will make you great.',
+    'tags': ['#Ambition', '#Inspiration', '#Motivitional'],
+  },
+  {
+    'title': 'Quotes3',
+    'imageUrl': 'assets/images/quotes/quotes3.png',
+    'views': '567.57k',
+    'tags': ['#Ambition', '#Inspiration', '#Motivitional'],
+  },
+];
+
+final sounds = [
+  {
+    'title': 'Wiper',
+    'imageUrl': 'assets/images/sounds/sounds1.jpg',
+    'views': '567.57k',
+    'tags': ['#Ambition', '#Inspiration', '#Motivitional'],
+  },
+  {
+    'title': 'Wiper',
+    'imageUrl': 'assets/images/sounds/sounds2.jpg',
+    'views': '567.57k',
+    'tags': ['#Ambition', '#Inspiration', '#Motivitional'],
+  },
+  {
+    'title': 'Wiper',
+    'imageUrl': 'assets/images/sounds/sounds1.jpg',
+    'views': '567.57k',
+    'tags': ['#Ambition', '#Inspiration', '#Motivitional'],
+  },
+];
