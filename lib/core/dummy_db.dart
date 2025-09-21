@@ -410,3 +410,54 @@ final sounds = [
     'tags': ['#Ambition', '#Inspiration', '#Motivitional'],
   },
 ];
+
+final wallpapers = [
+  {
+    'title': 'Wallpaper1',
+    'imageUrl': 'assets/images/wallpapers/wallpaper_1.png',
+    'views': '567.57k',
+    'tags': ['#Ambition', '#Inspiration', '#Motivitional'],
+  },
+  {
+    'title': 'Wallpaper2',
+    'imageUrl': 'assets/images/wallpapers/wallpaper_2.png',
+    'views': '567.57k',
+    'tags': ['#Ambition', '#Inspiration', '#Motivitional'],
+  },
+  {
+    'title': 'Wallpaper3',
+    'imageUrl': 'assets/images/wallpapers/wallpaper_3.png',
+    'views': '567.57k',
+    'tags': ['#Ambition', '#Inspiration', '#Motivitional'],
+  },
+  {
+    'title': 'Wallpaper4',
+    'imageUrl': 'assets/images/wallpapers/wallpaper_4.png',
+    'views': '567.57k',
+    'tags': ['#Ambition', '#Inspiration', '#Motivitional'],
+  },
+  {
+    'title': 'Wallpaper5',
+    'imageUrl': 'assets/images/wallpapers/wallpaper_5.png',
+    'views': '567.57k',
+    'tags': ['#Ambition', '#Inspiration', '#Motivitional'],
+  },
+  {
+    'title': 'Wallpaper6',
+    'imageUrl': 'assets/images/wallpapers/wallpaper_6.png',
+    'views': '567.57k',
+    'tags': ['#Ambition', '#Inspiration', '#Motivitional'],
+  },
+  {
+    'title': 'Wallpaper7',
+    'imageUrl': 'assets/images/wallpapers/wallpaper_7.png',
+    'views': '567.57k',
+    'tags': ['#Ambition', '#Inspiration', '#Motivitional'],
+  },
+  {
+    'title': 'Wallpaper8',
+    'imageUrl': 'assets/images/wallpapers/wallpaper_8.png',
+    'views': '567.57k',
+    'tags': ['#Ambition', '#Inspiration', '#Motivitional'],
+  },
+];

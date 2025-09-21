@@ -1,8 +1,7 @@
+import 'package:cardinal_quotes_task/core/widgets/card_action_menu.dart';
+import 'package:cardinal_quotes_task/core/widgets/card_info.dart';
 import 'package:cardinal_quotes_task/features/home/model/quotes.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../core/theme/app_palette.dart';
-import 'custom_button.dart';
 
 class QuotesCard extends StatelessWidget {
   final Quotes quote;
@@ -55,70 +54,12 @@ class QuotesCard extends StatelessWidget {
             ),
           ),
         const SizedBox(height: 5),
-        SizedBox(
-          height: 20,
-          child: ListView.builder(
-            shrinkWrap: true,
-            scrollDirection: Axis.horizontal,
-            itemCount: quote.tags.length,
-            itemBuilder: (context, index) {
-              return Padding(
-                padding: const EdgeInsets.only(right: 15),
-                child: Text(
-                  quote.tags[index],
-                  style: const TextStyle(
-                    color: AppPalette.color1,
-                    fontFamily: 'Raleway',
-                    fontSize: 12,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-              );
-            },
-          ),
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            CustomButton(
-              icon: const Icon(
-                Icons.visibility,
-                color: AppPalette.colorWhite,
-                size: 20,
-              ),
-              text: quote.views,
-            ),
-            CustomButton(
-              onTap: onShare,
-              icon: Transform.flip(
-                flipX: true,
-                child: const Icon(
-                  Icons.reply,
-                  color: AppPalette.colorWhite,
-                  size: 20,
-                ),
-              ),
-              text: 'Share',
-            ),
-            CustomButton(
-              onTap: onDownload,
-              icon: const Icon(
-                Icons.download,
-                color: AppPalette.colorWhite,
-                size: 20,
-              ),
-              text: 'Download',
-            ),
-            CustomButton(
-              onTap: onSave,
-              icon: const Icon(
-                Icons.bookmark,
-                color: AppPalette.colorWhite,
-                size: 20,
-              ),
-              text: 'Save',
-            ),
-          ],
+        CardInfo(tags: quote.tags),
+        CardActionMenu(
+          views: quote.views,
+          onDownload: onDownload,
+          onSave: onSave,
+          onShare: onShare,
         ),
       ],
     );

@@ -1,9 +1,10 @@
-import 'package:cardinal_quotes_task/features/home/model/sound.dart';
+import 'package:cardinal_quotes_task/core/widgets/card_action_menu.dart';
+import 'package:cardinal_quotes_task/core/widgets/card_info.dart';
+import 'package:cardinal_quotes_task/core/models/sound.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../core/theme/app_palette.dart';
-import 'custom_button.dart';
 
 class SoundCard extends StatelessWidget {
   final Sound sound;
@@ -126,84 +127,18 @@ class SoundCard extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 15),
-              Text(
-                'Music: ${sound.title}',
-                style: const TextStyle(
-                  fontFamily: 'Raleway',
-                  fontSize: 12,
-                  fontWeight: FontWeight.w700,
-                  color: AppPalette.color1,
-                ),
-              ),
-              const SizedBox(height: 5),
-              SizedBox(
-                height: 20,
-                child: ListView.builder(
-                  shrinkWrap: true,
-                  scrollDirection: Axis.horizontal,
-                  itemCount: sound.tags.length,
-                  itemBuilder: (context, index) {
-                    return Padding(
-                      padding: const EdgeInsets.only(right: 15),
-                      child: Text(
-                        sound.tags[index],
-                        style: const TextStyle(
-                          color: AppPalette.color1,
-                          fontFamily: 'Raleway',
-                          fontSize: 12,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    );
-                  },
-                ),
+              CardInfo(
+                soundTitle: sound.title,
+                tags: sound.tags,
               ),
             ],
           ),
         ),
-
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            CustomButton(
-              icon: const Icon(
-                Icons.visibility,
-                color: AppPalette.colorWhite,
-                size: 20,
-              ),
-              text: sound.views,
-            ),
-            CustomButton(
-              onTap: onShare,
-              icon: Transform.flip(
-                flipX: true,
-                child: const Icon(
-                  Icons.reply,
-                  color: AppPalette.colorWhite,
-                  size: 20,
-                ),
-              ),
-              text: 'Share',
-            ),
-            CustomButton(
-              onTap: onDownload,
-              icon: const Icon(
-                Icons.download,
-                color: AppPalette.colorWhite,
-                size: 20,
-              ),
-              text: 'Download',
-            ),
-            CustomButton(
-              onTap: onSave,
-              icon: const Icon(
-                Icons.bookmark,
-                color: AppPalette.colorWhite,
-                size: 20,
-              ),
-              text: 'Save',
-            ),
-          ],
+        CardActionMenu(
+          views: sound.views,
+          onDownload: onDownload,
+          onSave: onSave,
+          onShare: onShare,
         ),
       ],
     );

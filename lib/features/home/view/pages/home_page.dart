@@ -1,11 +1,13 @@
 import 'package:cardinal_quotes_task/core/dummy_db.dart';
 import 'package:cardinal_quotes_task/core/theme/app_palette.dart';
 import 'package:cardinal_quotes_task/features/auth/view/pages/login_page.dart';
+import 'package:cardinal_quotes_task/features/home/view/pages/sound_page.dart';
 import 'package:cardinal_quotes_task/features/home/view/widgets/custom_drawer.dart';
 import 'package:cardinal_quotes_task/features/home/view/widgets/featured_card.dart';
 import 'package:cardinal_quotes_task/features/home/view/widgets/featured_title.dart';
 import 'package:cardinal_quotes_task/features/home/view/widgets/menu_card.dart';
 import 'package:cardinal_quotes_task/features/home/view/widgets/top_menu_card.dart';
+import 'package:cardinal_quotes_task/features/wallpaper/views/pages/wallpaper_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -17,8 +19,19 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   bool showDrawer = false;
+
   @override
   Widget build(BuildContext context) {
+    void menuNavigation(int index) {
+      final soundIndexs = [0, 2, 3, 4, 5, 6, 7];
+      soundIndexs.contains(index);
+      if (soundIndexs.contains(index)) {
+        Navigator.of(context).push(SoundPage.route(menus[index]['title']!));
+      } else if (index == 1) {
+        Navigator.of(context).push(WallpaperPage.route());
+      }
+    }
+
     return SafeArea(
       child: SingleChildScrollView(
         child: Stack(
@@ -82,9 +95,12 @@ class _HomePageState extends State<HomePage> {
                         ),
                     itemCount: menus.length,
                     itemBuilder: (context, index) {
-                      return MenuCard(
-                        iconPath: menus[index]['iconPath']!,
-                        title: menus[index]['title']!,
+                      return GestureDetector(
+                        onTap: () => menuNavigation(index),
+                        child: MenuCard(
+                          iconPath: menus[index]['iconPath']!,
+                          title: menus[index]['title']!,
+                        ),
                       );
                     },
                   ),

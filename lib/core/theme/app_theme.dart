@@ -24,6 +24,12 @@ class AppTheme {
         fontWeight: FontWeight.w600,
       ),
     ),
+    sliderTheme: SliderThemeData(
+      thumbShape: SliderComponentShape.noThumb,
+      overlayShape: SliderComponentShape.noOverlay,
+      trackHeight: 12,
+      padding: EdgeInsets.zero,
+    ),
     scaffoldBackgroundColor: AppPalette.colorgg,
     splashColor: Colors.transparent,
     highlightColor: AppPalette.color3.withAlpha(50),

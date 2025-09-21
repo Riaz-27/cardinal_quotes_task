@@ -24,7 +24,7 @@ class _HomeNavPageState extends State<HomeNavPage> {
 
   final pages = [
     const HomePage(),
-    const SoundPage(),
+    const SoundPage(appbarTitle: 'Sounds'),
     const SoulPage(),
     const TopPage(),
   ];

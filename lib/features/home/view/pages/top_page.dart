@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/dummy_db.dart';
+import '../../../../core/theme/app_palette.dart';
 import '../../model/quotes.dart';
 import '../widgets/quotes_card.dart';
 
@@ -11,9 +12,19 @@ class TopPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 30),
-          child: Text('Top Quotes'),
+        title: const Text('Top Quotes'),
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 20),
+          child: IconButton(
+            onPressed: () {
+              Navigator.of(context).popUntil((route) => route.isFirst);
+            },
+            icon: const Icon(
+              Icons.arrow_forward_rounded,
+              size: 26,
+              color: AppPalette.color1,
+            ),
+          ),
         ),
       ),
       body: Padding(
