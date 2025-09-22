@@ -66,11 +66,14 @@ flutter:
     - assets/images/quotes/
     - assets/images/sounds/
     - assets/images/wallpapers/
+    - assets/images/journal_bgs/
     - assets/icons/
     - assets/icons/top_menu_icons/
     - assets/icons/menu_icons/
     - assets/icons/nav_icons/
     - assets/icons/drawer_icons/
+    - assets/icons/feeling_icons/
+    - assets/icons/journals_icons/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

@@ -1,12 +1,15 @@
 import 'package:cardinal_quotes_task/core/dummy_db.dart';
 import 'package:cardinal_quotes_task/core/theme/app_palette.dart';
 import 'package:cardinal_quotes_task/features/auth/view/pages/login_page.dart';
+import 'package:cardinal_quotes_task/features/home/view/pages/soul_page.dart';
 import 'package:cardinal_quotes_task/features/home/view/pages/sound_page.dart';
+import 'package:cardinal_quotes_task/features/home/view/pages/top_page.dart';
 import 'package:cardinal_quotes_task/features/home/view/widgets/custom_drawer.dart';
 import 'package:cardinal_quotes_task/features/home/view/widgets/featured_card.dart';
 import 'package:cardinal_quotes_task/features/home/view/widgets/featured_title.dart';
 import 'package:cardinal_quotes_task/features/home/view/widgets/menu_card.dart';
 import 'package:cardinal_quotes_task/features/home/view/widgets/top_menu_card.dart';
+import 'package:cardinal_quotes_task/features/journals/views/pages/journal_page.dart';
 import 'package:cardinal_quotes_task/features/wallpaper/views/pages/wallpaper_page.dart';
 import 'package:flutter/material.dart';
 
@@ -29,6 +32,14 @@ class _HomePageState extends State<HomePage> {
         Navigator.of(context).push(SoundPage.route(menus[index]['title']!));
       } else if (index == 1) {
         Navigator.of(context).push(WallpaperPage.route());
+      } else if (index == 8 || index == 14 || index == 12) {
+        Navigator.of(
+          context,
+        ).push(TopPage.route(appbarTitle: menus[index]['title']!));
+      } else if (index == 9) {
+        Navigator.of(context).push(SoulPage.route(showFeedback: true));
+      } else if (index == 10) {
+        Navigator.of(context).push(JournalPage.route());
       }
     }
 

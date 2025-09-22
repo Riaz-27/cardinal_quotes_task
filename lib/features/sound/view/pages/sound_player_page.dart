@@ -49,10 +49,10 @@ class _SoundPlayerPageState extends State<SoundPlayerPage> {
       appBar: AppBar(
         title: Text(widget.appbarTitle),
         leading: Padding(
-          padding: const EdgeInsets.only(left: 30),
+          padding: const EdgeInsets.only(left: 20),
           child: IconButton(
             onPressed: () {
-              Navigator.of(context).pop();
+              Navigator.of(context).popUntil((route) => route.isFirst);
             },
             icon: const Icon(
               Icons.arrow_forward_rounded,

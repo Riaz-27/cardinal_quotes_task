@@ -228,7 +228,7 @@ const menus = [
   },
   {
     "iconPath": "assets/icons/menu_icons/top_quotes.svg",
-    "title": "Top \n Quotes",
+    "title": "Top Quotes",
   },
   {
     "iconPath": "assets/icons/menu_icons/soul_check_in.svg",
@@ -459,5 +459,70 @@ final wallpapers = [
     'imageUrl': 'assets/images/wallpapers/wallpaper_8.png',
     'views': '567.57k',
     'tags': ['#Ambition', '#Inspiration', '#Motivitional'],
+  },
+];
+
+final feelingOptions = [
+  {
+    'iconPath': 'assets/icons/feeling_icons/awesome.svg',
+    'title': 'Awesome',
+  },
+  {
+    'iconPath': 'assets/icons/feeling_icons/good.svg',
+    'title': 'Good',
+  },
+  {
+    'iconPath': 'assets/icons/feeling_icons/neutral.svg',
+    'title': 'Neutral',
+  },
+  {
+    'iconPath': 'assets/icons/feeling_icons/bad.svg',
+    'title': 'Bad',
+  },
+  {
+    'iconPath': 'assets/icons/feeling_icons/terrible.svg',
+    'title': 'Terrible',
+  },
+  {
+    'iconPath': 'assets/icons/feeling_icons/others.svg',
+    'title': 'Others',
+  },
+];
+
+final journals = [
+  {
+    'title': 'My Story',
+    'note':
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took",
+    'backgroundColor': 'C1FFFA',
+    'textColor': '52180D',
+  },
+  {
+    'title': 'My Story',
+    'note':
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took",
+    'backgroundColor': 'FFF9C1',
+    'textColor': '52180D',
+  },
+  {
+    'title': 'My Story',
+    'note':
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took",
+    'backgroundColor': 'FFC1F9',
+    'textColor': '52180D',
+  },
+  {
+    'title': 'My Story',
+    'note':
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took",
+    'backgroundColor': '000000',
+    'textColor': 'FEF0D6',
+  },
+  {
+    'title': 'My Story',
+    'note':
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took",
+    'backgroundColor': 'C1FFFA',
+    'textColor': '52180D',
   },
 ];

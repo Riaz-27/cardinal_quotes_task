@@ -54,7 +54,7 @@ class CardActionMenu extends StatelessWidget {
               CustomButton(
                 onTap: onDownload,
                 icon: const Icon(
-                  Icons.download,
+                  Icons.save_alt,
                   color: AppPalette.colorWhite,
                   size: 20,
                 ),

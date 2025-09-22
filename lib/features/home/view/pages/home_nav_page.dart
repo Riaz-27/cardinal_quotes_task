@@ -26,7 +26,9 @@ class _HomeNavPageState extends State<HomeNavPage> {
     const HomePage(),
     const SoundPage(appbarTitle: 'Sounds'),
     const SoulPage(),
-    const TopPage(),
+    const TopPage(
+      appbarTitle: 'Top Quotes',
+    ),
   ];
 
   Widget notificationPopup() => Positioned(

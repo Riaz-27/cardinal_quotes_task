@@ -6,13 +6,18 @@ import '../../model/quotes.dart';
 import '../widgets/quotes_card.dart';
 
 class TopPage extends StatelessWidget {
-  const TopPage({super.key});
+  static MaterialPageRoute route({required appbarTitle}) => MaterialPageRoute(
+    builder: (context) => TopPage(appbarTitle: appbarTitle),
+  );
+
+  final String appbarTitle;
+  const TopPage({super.key, required this.appbarTitle});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Top Quotes'),
+        title: Text(appbarTitle),
         leading: Padding(
           padding: const EdgeInsets.only(left: 20),
           child: IconButton(
