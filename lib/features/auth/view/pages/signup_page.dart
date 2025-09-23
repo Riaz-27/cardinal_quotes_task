@@ -3,6 +3,8 @@ import 'package:cardinal_quotes_task/core/widgets/custom_field.dart';
 import 'package:cardinal_quotes_task/features/auth/view/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
+import '../../../home/view/pages/home_nav_page.dart';
+
 class SignupPage extends StatefulWidget {
   static MaterialPageRoute route() =>
       MaterialPageRoute(builder: (context) => const SignupPage());
@@ -139,7 +141,12 @@ class _SignupPageState extends State<SignupPage> {
                     ),
                     const SizedBox(height: 40),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).pushAndRemoveUntil(
+                          HomeNavPage.route(),
+                          (route) => false,
+                        );
+                      },
                       child: const Text('Next'),
                     ),
                   ],

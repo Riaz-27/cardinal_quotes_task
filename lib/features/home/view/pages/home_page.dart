@@ -108,7 +108,7 @@ class _HomePageState extends State<HomePage> {
                           crossAxisCount: 3,
                           crossAxisSpacing: 20,
                           mainAxisSpacing: 20,
-                          childAspectRatio: 100 / 70,
+                          childAspectRatio: 95 / 70,
                         ),
                     itemCount: menus.length,
                     itemBuilder: (context, index) {
