@@ -197,62 +197,77 @@ const menus = [
   {
     "iconPath": "assets/icons/menu_icons/cardinal_sounds.svg",
     "title": "Cardinal Sounds",
+    "size": 30.0,
   },
   {
     "iconPath": "assets/icons/menu_icons/wallpaper.svg",
     "title": "Wallpaper",
+    "size": 22.0,
   },
   {
     "iconPath": "assets/icons/menu_icons/nature_sounds.svg",
     "title": "Nature Sounds",
+    "size": 20.0,
   },
   {
     "iconPath": "assets/icons/menu_icons/sleeping_sounds.svg",
     "title": "Sleeping Sounds",
+    "size": 20.0,
   },
   {
     "iconPath": "assets/icons/menu_icons/meditation.svg",
     "title": "Meditation",
+    "size": 30.0,
   },
   {
     "iconPath": "assets/icons/menu_icons/breathing_exercises.svg",
     "title": "Breathing Exercises",
+    "size": 35.0,
   },
   {
     "iconPath": "assets/icons/menu_icons/short_meditations.svg",
     "title": "Short Meditations",
+    "size": 30.0,
   },
   {
     "iconPath": "assets/icons/menu_icons/meditational_audios.svg",
     "title": "Meditational Audios",
+    "size": 38.0,
   },
   {
     "iconPath": "assets/icons/menu_icons/top_quotes.svg",
     "title": "Top Quotes",
+    "size": 15.0,
   },
   {
     "iconPath": "assets/icons/menu_icons/soul_check_in.svg",
     "title": "Soul Check-In",
+    "size": 25.0,
   },
   {
     "iconPath": "assets/icons/menu_icons/sacred_journals.svg",
     "title": "Sacred Journals",
+    "size": 25.0,
   },
   {
     "iconPath": "assets/icons/menu_icons/medicine_notes.svg",
     "title": "Medicine Notes",
+    "size": 28.0,
   },
   {
     "iconPath": "assets/icons/menu_icons/memorial_cards.svg",
     "title": "Memorial Cards",
+    "size": 30.0,
   },
   {
     "iconPath": "assets/icons/menu_icons/save.svg",
     "title": "Save",
+    "size": 30.0,
   },
   {
     "iconPath": "assets/icons/menu_icons/cardinal_quotes.svg",
     "title": "Cardinal Quotes",
+    "size": 20.0,
   },
 ];
 

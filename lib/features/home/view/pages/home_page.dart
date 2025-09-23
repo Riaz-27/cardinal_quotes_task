@@ -115,8 +115,9 @@ class _HomePageState extends State<HomePage> {
                       return GestureDetector(
                         onTap: () => menuNavigation(index),
                         child: MenuCard(
-                          iconPath: menus[index]['iconPath']!,
-                          title: menus[index]['title']!,
+                          iconPath: menus[index]['iconPath'] as String,
+                          title: menus[index]['title'] as String,
+                          iconSize: menus[index]['size'] as double,
                         ),
                       );
                     },

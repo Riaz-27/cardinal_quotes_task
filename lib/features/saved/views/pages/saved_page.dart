@@ -2,12 +2,9 @@ import 'package:cardinal_quotes_task/core/dummy_db.dart';
 import 'package:cardinal_quotes_task/core/models/quotes.dart';
 import 'package:cardinal_quotes_task/core/models/sound.dart';
 import 'package:cardinal_quotes_task/core/models/wallpaper.dart';
-import 'package:cardinal_quotes_task/core/theme/app_theme.dart';
 import 'package:cardinal_quotes_task/core/widgets/sound_card.dart';
-import 'package:cardinal_quotes_task/features/home/view/pages/soul_page.dart';
 import 'package:cardinal_quotes_task/features/saved/views/widgets/custom_chip_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../../../../core/theme/app_palette.dart';
 import '../../../../core/widgets/quotes_card.dart';
