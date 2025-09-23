@@ -9,4 +9,5 @@ class AppPalette {
   static const color5 = Color(0xFFFF522F);
 
   static const colorWhite = Color(0xFFF0F0F0);
+  static const colorRed = Color(0xFFE20101);
 }

@@ -30,7 +30,7 @@ class JournalTextField extends StatelessWidget {
       expands: isNote ? true : false,
       textAlign: TextAlign.justify,
       decoration: InputDecoration(
-        contentPadding: const EdgeInsets.symmetric(vertical: 10),
+        contentPadding: const EdgeInsets.only(top: 10, bottom: 10, left: 10),
         border: InputBorder.none,
         enabledBorder: InputBorder.none,
         focusedBorder: InputBorder.none,

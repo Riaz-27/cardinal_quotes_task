@@ -8,11 +8,13 @@ class Wallpaper {
   final String imageUrl;
   final String views;
   final List<String> tags;
+  final bool isSaved;
   Wallpaper({
     required this.title,
     required this.imageUrl,
     required this.views,
     required this.tags,
+    required this.isSaved,
   });
 
   Wallpaper copyWith({
@@ -20,12 +22,14 @@ class Wallpaper {
     String? imageUrl,
     String? views,
     List<String>? tags,
+    bool? isSaved,
   }) {
     return Wallpaper(
       title: title ?? this.title,
       imageUrl: imageUrl ?? this.imageUrl,
       views: views ?? this.views,
       tags: tags ?? this.tags,
+      isSaved: isSaved ?? this.isSaved,
     );
   }
 
@@ -35,6 +39,7 @@ class Wallpaper {
       'imageUrl': imageUrl,
       'views': views,
       'tags': tags,
+      'isSaved': isSaved,
     };
   }
 
@@ -44,6 +49,7 @@ class Wallpaper {
       imageUrl: map['imageUrl'] ?? '',
       views: map['views'] ?? '',
       tags: List<String>.from((map['tags'] ?? [])),
+      isSaved: map['isSaved'] ?? false,
     );
   }
 

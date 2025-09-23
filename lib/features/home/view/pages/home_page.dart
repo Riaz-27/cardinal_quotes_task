@@ -10,6 +10,8 @@ import 'package:cardinal_quotes_task/features/home/view/widgets/featured_title.d
 import 'package:cardinal_quotes_task/features/home/view/widgets/menu_card.dart';
 import 'package:cardinal_quotes_task/features/home/view/widgets/top_menu_card.dart';
 import 'package:cardinal_quotes_task/features/journals/views/pages/journal_page.dart';
+import 'package:cardinal_quotes_task/features/saved/views/pages/saved_page.dart';
+import 'package:cardinal_quotes_task/features/todo/views/pages/todo_page.dart';
 import 'package:cardinal_quotes_task/features/wallpaper/views/pages/wallpaper_page.dart';
 import 'package:flutter/material.dart';
 
@@ -40,6 +42,10 @@ class _HomePageState extends State<HomePage> {
         Navigator.of(context).push(SoulPage.route(showFeedback: true));
       } else if (index == 10) {
         Navigator.of(context).push(JournalPage.route());
+      } else if (index == 11) {
+        Navigator.of(context).push(TodoPage.route());
+      } else if (index == 13) {
+        Navigator.of(context).push(SavedPage.route());
       }
     }
 
@@ -120,9 +126,14 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Padding(
-                      padding: EdgeInsets.fromLTRB(30, 30, 30, 15),
-                      child: FeaturedTitle(title: 'Featured Wallpaper'),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(30, 30, 30, 15),
+                      child: FeaturedTitle(
+                        title: 'Featured Wallpaper',
+                        onTap: () {
+                          Navigator.of(context).push(WallpaperPage.route());
+                        },
+                      ),
                     ),
                     SizedBox(
                       height: 132,
@@ -149,9 +160,16 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Padding(
-                      padding: EdgeInsets.fromLTRB(30, 30, 30, 15),
-                      child: FeaturedTitle(title: 'Featured Quotes'),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(30, 30, 30, 15),
+                      child: FeaturedTitle(
+                        title: 'Featured Quotes',
+                        onTap: () {
+                          Navigator.of(
+                            context,
+                          ).push(TopPage.route(appbarTitle: 'Top Quotes'));
+                        },
+                      ),
                     ),
                     SizedBox(
                       height: 132,
@@ -178,9 +196,16 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Padding(
-                      padding: EdgeInsets.fromLTRB(30, 30, 30, 15),
-                      child: FeaturedTitle(title: 'Featured Memorial Cards'),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(30, 30, 30, 15),
+                      child: FeaturedTitle(
+                        title: 'Featured Memorial Cards',
+                        onTap: () {
+                          Navigator.of(
+                            context,
+                          ).push(TopPage.route(appbarTitle: 'Memorial Cards'));
+                        },
+                      ),
                     ),
                     SizedBox(
                       height: 132,

@@ -35,8 +35,6 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   flutter_svg: ^2.2.1
-  volume_controller: ^3.4.0
-  just_audio: ^0.10.5
 
 dev_dependencies:
   flutter_test:
@@ -67,6 +65,7 @@ flutter:
     - assets/images/sounds/
     - assets/images/wallpapers/
     - assets/images/journal_bgs/
+    - assets/images/todo_bgs/
     - assets/icons/
     - assets/icons/top_menu_icons/
     - assets/icons/menu_icons/
@@ -74,6 +73,7 @@ flutter:
     - assets/icons/drawer_icons/
     - assets/icons/feeling_icons/
     - assets/icons/journals_icons/
+    - assets/icons/todo_icons/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

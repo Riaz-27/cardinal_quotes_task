@@ -1,6 +1,6 @@
 import 'package:cardinal_quotes_task/core/widgets/card_action_menu.dart';
 import 'package:cardinal_quotes_task/core/widgets/card_info.dart';
-import 'package:cardinal_quotes_task/features/home/model/quotes.dart';
+import 'package:cardinal_quotes_task/core/models/quotes.dart';
 import 'package:flutter/material.dart';
 
 class QuotesCard extends StatelessWidget {
@@ -57,6 +57,7 @@ class QuotesCard extends StatelessWidget {
         CardInfo(tags: quote.tags),
         CardActionMenu(
           views: quote.views,
+          isSaved: quote.isSaved,
           onDownload: onDownload,
           onSave: onSave,
           onShare: onShare,

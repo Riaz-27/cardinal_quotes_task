@@ -1,6 +1,6 @@
 import 'package:cardinal_quotes_task/core/dummy_db.dart';
 import 'package:cardinal_quotes_task/core/models/sound.dart';
-import 'package:cardinal_quotes_task/features/home/view/widgets/sound_card.dart';
+import 'package:cardinal_quotes_task/core/widgets/sound_card.dart';
 import 'package:cardinal_quotes_task/features/sound/view/pages/sound_player_page.dart';
 import 'package:flutter/material.dart';
 

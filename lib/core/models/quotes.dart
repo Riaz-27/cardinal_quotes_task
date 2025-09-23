@@ -11,6 +11,7 @@ class Quotes {
   final String? quoteText;
   final String views;
   final List<String> tags;
+  final bool isSaved;
   Quotes({
     required this.title,
     this.imageUrl,
@@ -18,6 +19,7 @@ class Quotes {
     this.quoteText,
     required this.views,
     required this.tags,
+    required this.isSaved,
   });
 
   Quotes copyWith({
@@ -27,6 +29,7 @@ class Quotes {
     String? quoteText,
     String? views,
     List<String>? tags,
+    bool? isSaved,
   }) {
     return Quotes(
       title: title ?? this.title,
@@ -35,6 +38,7 @@ class Quotes {
       quoteText: quoteText ?? this.quoteText,
       views: views ?? this.views,
       tags: tags ?? this.tags,
+      isSaved: isSaved ?? this.isSaved,
     );
   }
 
@@ -46,6 +50,7 @@ class Quotes {
       'quoteText': quoteText ?? '',
       'views': views,
       'tags': tags,
+      'isSaved': isSaved,
     };
   }
 
@@ -59,6 +64,7 @@ class Quotes {
       quoteText: map['quoteText'] ?? '',
       views: map['views'] ?? '',
       tags: List<String>.from((map['tags'] ?? [])),
+      isSaved: map['isSaved'] ?? false,
     );
   }
 

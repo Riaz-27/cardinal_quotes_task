@@ -1,7 +1,7 @@
 import 'package:cardinal_quotes_task/core/dummy_db.dart';
-import 'package:cardinal_quotes_task/features/home/model/quotes.dart';
+import 'package:cardinal_quotes_task/core/models/quotes.dart';
 import 'package:cardinal_quotes_task/features/home/view/widgets/feedback_card.dart';
-import 'package:cardinal_quotes_task/features/home/view/widgets/quotes_card.dart';
+import 'package:cardinal_quotes_task/core/widgets/quotes_card.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/theme/app_palette.dart';

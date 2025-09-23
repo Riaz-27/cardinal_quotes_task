@@ -1,7 +1,7 @@
-import 'package:cardinal_quotes_task/features/wallpaper/model/wallpaper.dart';
+import 'package:cardinal_quotes_task/core/models/wallpaper.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/theme/app_palette.dart';
+import '../theme/app_palette.dart';
 import 'wallpaper_popup_menu_button.dart';
 
 class WallpaperPopup extends StatelessWidget {
@@ -47,9 +47,9 @@ class WallpaperPopup extends StatelessWidget {
               icon: Icons.visibility,
               title: wallpaper.views,
             ),
-            const WallpaperPopupMenuButton(
+            WallpaperPopupMenuButton(
               icon: Icons.bookmark,
-              title: 'Save',
+              title: wallpaper.isSaved ? 'Remove' : 'Save',
             ),
             const WallpaperPopupMenuButton(
               icon: Icons.reply,

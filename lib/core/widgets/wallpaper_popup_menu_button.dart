@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/theme/app_palette.dart';
+import '../theme/app_palette.dart';
 
 class WallpaperPopupMenuButton extends StatelessWidget {
   final IconData icon;

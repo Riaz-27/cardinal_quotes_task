@@ -7,11 +7,13 @@ class Sound {
   final String imageUrl;
   final String views;
   final List<String> tags;
+  final bool isSaved;
   Sound({
     required this.title,
     required this.imageUrl,
     required this.views,
     required this.tags,
+    required this.isSaved,
   });
 
   Sound copyWith({
@@ -19,12 +21,14 @@ class Sound {
     String? imageUrl,
     String? views,
     List<String>? tags,
+    bool? isSaved,
   }) {
     return Sound(
       title: title ?? this.title,
       imageUrl: imageUrl ?? this.imageUrl,
       views: views ?? this.views,
       tags: tags ?? this.tags,
+      isSaved: isSaved ?? this.isSaved,
     );
   }
 
@@ -34,6 +38,7 @@ class Sound {
       'imageUrl': imageUrl,
       'views': views,
       'tags': tags,
+      'isSaved': isSaved,
     };
   }
 
@@ -43,6 +48,7 @@ class Sound {
       imageUrl: map['imageUrl'] ?? '',
       views: map['views'] ?? '',
       tags: List<String>.from((map['tags'] ?? [])),
+      isSaved: map['isSaved'] ?? false,
     );
   }
 

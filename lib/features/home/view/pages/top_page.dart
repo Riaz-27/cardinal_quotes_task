@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/dummy_db.dart';
 import '../../../../core/theme/app_palette.dart';
-import '../../model/quotes.dart';
-import '../widgets/quotes_card.dart';
+import '../../../../core/models/quotes.dart';
+import '../../../../core/widgets/quotes_card.dart';
 
 class TopPage extends StatelessWidget {
   static MaterialPageRoute route({required appbarTitle}) => MaterialPageRoute(

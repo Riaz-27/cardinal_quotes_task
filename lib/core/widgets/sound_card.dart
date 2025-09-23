@@ -4,7 +4,7 @@ import 'package:cardinal_quotes_task/core/models/sound.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../../core/theme/app_palette.dart';
+import '../theme/app_palette.dart';
 
 class SoundCard extends StatelessWidget {
   final Sound sound;
@@ -136,6 +136,7 @@ class SoundCard extends StatelessWidget {
         ),
         CardActionMenu(
           views: sound.views,
+          isSaved: sound.isSaved,
           onDownload: onDownload,
           onSave: onSave,
           onShare: onShare,

@@ -11,19 +11,19 @@ class Background2 extends StatelessWidget {
         Positioned(
           top: 0,
           child: SizedBox(
-            height: 224,
+            height: 324,
             width: deviceSize.width,
             child: Image.asset(
               'assets/images/journal_bgs/bg2_top.png',
               fit: BoxFit.cover,
-              alignment: Alignment.bottomCenter,
-              opacity: const AlwaysStoppedAnimation(0.3),
+              alignment: Alignment.topCenter,
+              opacity: const AlwaysStoppedAnimation(0.29),
             ),
           ),
         ),
         Positioned(
           right: 0,
-          bottom: 95,
+          top: deviceSize.height - 350,
           child: SizedBox(
             height: 193,
             width: 193,
@@ -31,7 +31,7 @@ class Background2 extends StatelessWidget {
               'assets/images/journal_bgs/bg2_bottom.png',
               fit: BoxFit.cover,
               alignment: Alignment.bottomCenter,
-              opacity: const AlwaysStoppedAnimation(0.3),
+              opacity: const AlwaysStoppedAnimation(0.2),
             ),
           ),
         ),
