@@ -47,7 +47,7 @@ class MenuCard extends StatelessWidget {
               fontWeight: FontWeight.w500,
               overflow: TextOverflow.visible,
               height: 1,
-              wordSpacing: 10,
+              wordSpacing: 100,
             ),
             textAlign: TextAlign.center,
           ),

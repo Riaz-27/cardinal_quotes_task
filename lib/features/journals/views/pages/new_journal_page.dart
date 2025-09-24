@@ -96,7 +96,7 @@ class _NewJournalPageState extends State<NewJournalPage> {
       body: SafeArea(
         child: Stack(
           children: [
-            backgrounds[1],
+            backgrounds[selectedIndex],
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
